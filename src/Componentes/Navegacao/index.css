@@ -1,0 +1,52 @@
+header {
+    margin: 50px 0 25px 0;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.container1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 25px;
+}
+
+.container1 span {
+    font-size: 42px;
+    color: #212A31;
+}
+
+.container1 a {
+    text-decoration: none;
+    color: #212A31;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 2px solid #124E66;
+}
+
+nav button {
+    color: #ED333B;
+    background-color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 2px solid #ED333B;
+}
+
+nav button:hover {
+    background-color: #ED333B;
+    color: #ffffff;
+}
+
+/*classe do navlink ativa*/
+.active {
+    background-color: #124E66;
+    color: #ffffff !important;
+}

@@ -1,0 +1,68 @@
+section {
+    max-width: 500px;
+    margin: auto;
+}
+
+li {
+    margin: 5px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eef0f1;
+    padding: 5px 5px 5px 20px;
+    border-radius: 10px;
+}
+
+li button {
+    padding: 10px 15px;
+    background-color: #ffffff;
+    color: #124E66;
+    border: 2px solid #124E66;
+    border-radius: 5px;
+}
+
+li button:hover {
+    background-color: #124E66;
+    color: #ffffff;
+    border: 2px solid #124E66;
+}
+
+.registrar {
+    padding: 5px 30px;
+    background-color: #124E66;
+    color: #ffffff;
+    border: 2px solid #124E66;
+    border-radius: 5px;
+    font-size: 3em;
+    margin-left: 50px;
+}
+
+.novoregistro {
+    margin: 15px 0 75px 50px;
+}
+
+.novoregistro form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.novoregistro form input {
+    flex-grow: 1;
+}
+
+.nrformsub {
+    max-width: 100px;
+    flex-grow: 0;
+    padding: 10px 20px;
+    background-color: #124E66;
+    color: #ffffff;
+    border: 2px solid #124E66;
+    border-radius: 5px;
+    text-align: center;
+}
