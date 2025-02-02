@@ -1,1 +1,1 @@
-#Repositório da lista de compras
+# Repositório da lista de compras
