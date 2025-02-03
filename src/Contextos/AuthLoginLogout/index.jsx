@@ -1,11 +1,20 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { auth } from "../../Firebase/config"; // Verifique se o caminho está correto
+import { db, auth } from "../../Firebase/config"; // Verifique se o caminho está correto
 import { 
   signInWithEmailAndPassword, 
   signOut, 
   onAuthStateChanged, 
   createUserWithEmailAndPassword 
 } from "firebase/auth";
+import { 
+  collection, 
+  addDoc,
+  query, 
+  where, 
+  onSnapshot,
+  deleteDoc, 
+  doc
+} from "firebase/firestore";
 
 // Criando o contexto
 const AuthContext = createContext();
@@ -58,8 +67,59 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  //função que registra os items de compra
+  const registraItem = async (nome) => {
+    if (!user) return; // Garante que o usuário está autenticado
+
+    try {
+      await addDoc(collection(db, "itens"), {
+          nome: nome,
+          usuario: user.uid, // ID do usuário autenticado
+      });
+    } catch (error) {
+      console.error("Erro ao adicionar item:", error);
+    }
+  };
+
+  //função que retorna a lista de itens para o seu usuario
+  const [lista, setLista] = useState([]); 
+  const [loadingLista, setLoadingLista] = useState(true);
+  //atualiza a lista sempre que houver uma mudança
+  useEffect(() => {
+    if (!user) {
+      setLista([]);  // Limpa a lista caso o usuário saia
+      setLoadingLista(false);
+      return;
+    }
+
+    setLoadingLista(true); // Inicia o carregamento
+
+    const q = query(collection(db, "itens"), where("usuario", "==", user.uid));
+
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      const items = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+      }));
+      setLista(items);
+      setLoadingLista(false); // Finaliza o carregamento
+    });
+
+    return () => unsubscribe();
+  }, [user]); 
+
+  //função que deleta um item do banco
+  const deletaItem = async (id) => {
+    try {
+      await deleteDoc(doc(db, "itens", id));
+      console.log("Item deletado com sucesso!");
+    } catch (error) {
+      console.error("Erro ao deletar item:", error);
+    }
+  };
+
   return (
-    <AuthContext.Provider value={{ user, login, register, logout, loading }}>
+    <AuthContext.Provider value={{ user, login, register, logout, loading, registraItem, lista, deletaItem, loadingLista }}>
       {!loading && children}
     </AuthContext.Provider>
   );

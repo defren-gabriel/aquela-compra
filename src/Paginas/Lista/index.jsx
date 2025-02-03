@@ -1,27 +1,22 @@
 import { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../Contextos/AuthLoginLogout";
 
 //importe o estilo local
 import "./index.css";
 
 const Lista = () => {
-    //coordena a lista
-    const [lista, setLista] = useState([
-        {id: 1, nome: "Abacate"},
-        {id: 2, nome: "Detergente"},
-        {id: 3, nome: "Arroz"},
-        {id: 4, nome: "Pilhas"},
-        {id: 5, nome: "Ração para gatos"}
-    ]);
-    const handleListaRemove = (id) => setLista(lista.filter((item)=>item.id != id));
-    const handleListaAdiciona = (item) => setLista((prev)=>[...prev, item]);
+    //coordenada o usuario e funcoes da tela
+    const {user, registraItem, lista, deletaItem, loadingLista} = useAuth();
+    const navigate = useNavigate();
 
     //coordena a adição do item na lista
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        console.log("Tentou registrar no item na lista de compras");
-        let temp = {id: Math.random()*100, nome: item}
-        handleListaAdiciona(temp);
+        
+        registraItem(item);
+        //atualiza a lista
+        
         setItem("");
         handleAcaoChange();
     }
@@ -42,31 +37,44 @@ const Lista = () => {
         }
     }, [acao]);
 
+    //verifica se estou logado, se não estiver vai para o inicio
+    useEffect(()=>{
+        if(!user){
+            navigate("/");
+        }
+    }, []);
+
     return(
         <section>
-            {
-                lista.length ?
-                    <h1>Lista de compras:</h1> :
-                    <h1>Sua lista de compras esta vazia</h1>
-            }
-            <ul>
-                {
-                    lista.map((item)=>(
-                        <li key={item.id}>-{item.nome}<button onClick={()=>handleListaRemove(item.id)}>Comprado</button></li>
-                    ))
-                }
-            </ul>
-            <button className="registrar" onClick={()=>handleAcaoChange()}>+</button>
-            {
-                acao &&
-                <div className="novoregistro">
-                    <form onSubmit={handleSubmit}>
-                        <label htmlFor="item">Item</label>
-                        <input type="text" name="item" id="item" value={item} onChange={handleItemChange} ref={inputItemRef} />
-                        <input type="submit" value="Registrar" className="nrformsub" />
-                    </form>
-                </div>
-            }
+        {
+            loadingLista ? ( 
+                <h1>Carregando sua lista...</h1> 
+            ) : lista.length ? ( 
+                <>
+                    <h1>Lista de compras:</h1>
+                    <ul>
+                        {
+                            lista.map((item) => (
+                                <li key={item.id}>-{item.nome}<button onClick={() => deletaItem(item.id)}>Comprado</button></li>
+                            ))
+                        }
+                    </ul>
+                </>
+            ) : ( 
+                <h1>Sua lista de compras está vazia</h1> 
+            )
+        }
+        <button className="registrar" onClick={handleAcaoChange}>+</button>
+        {
+            acao &&
+            <div className="novoregistro">
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor="item">Item</label>
+                    <input type="text" name="item" id="item" value={item} onChange={handleItemChange} ref={inputItemRef} />
+                    <input type="submit" value="Registrar" className="nrformsub" />
+                </form>
+            </div>
+        }
         </section>
     );
 }
