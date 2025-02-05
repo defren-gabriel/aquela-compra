@@ -10,7 +10,7 @@
 
 ###
 
-<p align="left">[Aquela Compra](https://defren-gabriel.github.io/aquela-compra/) - https://defren-gabriel.github.io/aquela-compra/</p>
+<p align="left">https://defren-gabriel.github.io/aquela-compra/</p>
 
 ###
 
