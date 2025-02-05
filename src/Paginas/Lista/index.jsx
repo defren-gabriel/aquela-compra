@@ -48,10 +48,10 @@ const Lista = () => {
         <section>
         {
             loadingLista ? ( 
-                <h1>Carregando sua lista...</h1> 
+                <h1 className="titulo">Carregando sua lista...</h1> 
             ) : lista.length ? ( 
                 <>
-                    <h1>Lista de compras:</h1>
+                    <h1 className="titulo">Lista de compras:</h1>
                     <ul>
                         {
                             lista.map((item) => (
@@ -61,7 +61,7 @@ const Lista = () => {
                     </ul>
                 </>
             ) : ( 
-                <h1>Sua lista de compras está vazia</h1> 
+                <h1 className="titulo">Sua lista de compras está vazia</h1> 
             )
         }
         <button className="registrar" onClick={handleAcaoChange}>+</button>

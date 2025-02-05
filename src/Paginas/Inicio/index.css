@@ -20,6 +20,7 @@
 
 .login h1 {
     margin-bottom: 25px;
+    font-size: 2em;
 }
 
 .email, .senha {
@@ -29,6 +30,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    color: #212A31;
 }
 
 .botoes-login {
@@ -69,6 +71,7 @@
 
 .registro h1 {
     margin-bottom: 25px;
+    font-size: 2em;
 }
 
 .botoes-registro {
@@ -106,4 +109,5 @@ input {
 
 #email, #senha {
     width: 220px;
+    color: #212A31;
 }
