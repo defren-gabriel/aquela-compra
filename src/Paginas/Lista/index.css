@@ -66,3 +66,10 @@ li button:hover {
     border-radius: 5px;
     text-align: center;
 }
+
+/*configuração para dispositivos moveis*/
+@media screen and (max-width: 750px){
+    li, .novoregistro form {
+        margin-right: 5px;
+    }
+}
