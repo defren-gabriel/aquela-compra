@@ -50,3 +50,13 @@ nav button:hover {
     background-color: #124E66;
     color: #ffffff !important;
 }
+
+/*configuração para celulares*/
+@media screen and (max-width: 750px){
+    .container1 {
+        gap: 5px;
+    }
+    .container1 span {
+        font-size: 28px;
+    }   
+}
