@@ -55,7 +55,7 @@ const Lista = () => {
                     <ul>
                         {
                             lista.map((item) => (
-                                <li key={item.id}>-{item.nome}<button onClick={() => deletaItem(item.id)}>Comprado</button></li>
+                                <li key={item.id}>-{item.nome}<button onClick={() => deletaItem(item.id)}>X</button></li>
                             ))
                         }
                     </ul>
