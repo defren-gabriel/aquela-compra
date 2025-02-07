@@ -9,6 +9,7 @@ header {
     justify-content: flex-end;
     align-items: center;
     gap: 5px;
+    margin-bottom: 15px;
 }
 
 .dev a {
