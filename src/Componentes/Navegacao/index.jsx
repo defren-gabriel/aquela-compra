@@ -34,7 +34,7 @@ const Navegacao = () => {
                 <div className="container1">
                     <span>Aquela Compra</span>
                     <NavLink to={"/"} style={{display: estaLista ? "none" : "block"}} disabled={estaLista}>Início</NavLink>
-                    <NavLink to={"/lista"} style={{display: estaInicio ? "none" : "block"}} disabled={estaInicio} >Lista</NavLink>
+                    <NavLink to={"/lista"} style={{display: estaInicio ? "none" : "block"}} disabled={estaInicio} >Compras</NavLink>
                 </div>
                 <button style={{display: estaInicio ? "none" : "block"}} disabled={estaInicio} onClick={()=>handleSair()}>Sair</button>
             </nav>
