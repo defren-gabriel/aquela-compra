@@ -25,6 +25,11 @@ const Navegacao = () => {
 
     return(
         <header>
+            <div className="dev">
+                <a href="https://github.com/defren-gabriel/aquela-compra" target="_blank">Link do Projeto</a>
+                <a href="https://github.com/defren-gabriel" target="_blank">Link do DeFrEn</a>
+            </div>
+
             <nav>
                 <div className="container1">
                     <span>Aquela Compra</span>
