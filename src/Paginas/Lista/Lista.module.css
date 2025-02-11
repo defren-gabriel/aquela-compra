@@ -1,14 +1,14 @@
-section {
+.secao {
     max-width: 500px;
     margin: auto;
 }
 
-.titulo {
+.titulo1 {
     color: #212A31;
     font-size: 2em;
 }
 
-li {
+.itemlista {
     margin: 5px 0;
     display: flex;
     flex-direction: row;
@@ -22,7 +22,7 @@ li {
     font-size: 1.2em;
 }
 
-li button {
+.lb {
     padding: 10px 15px;
     background-color: #ffffff;
     color: #124E66;
@@ -30,7 +30,7 @@ li button {
     border-radius: 5px;
 }
 
-li button:hover {
+.lb:hover {
     background-color: #124E66;
     color: #ffffff;
     border: 2px solid #124E66;
@@ -50,7 +50,7 @@ li button:hover {
     margin: 15px 0 75px 50px;
 }
 
-.novoregistro form {
+.novoregistrof {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -59,7 +59,7 @@ li button:hover {
     gap: 5px;
 }
 
-.novoregistro form input {
+.novoregistrofi {
     flex-grow: 1;
 }
 
@@ -76,7 +76,7 @@ li button:hover {
 
 /*configuração para dispositivos moveis*/
 @media screen and (max-width: 750px){
-    li, .novoregistro form {
+    .itemlista, .novoregistrof {
         margin-right: 5px;
     }
 }

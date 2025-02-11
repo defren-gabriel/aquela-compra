@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../Contextos/AuthLoginLogout";
 
 //importe o estilo local
-import "./index.css";
+import styles from "./Lista.module.css";
 
 const Lista = () => {
     //coordenada o usuario e funcoes da tela
@@ -45,33 +45,33 @@ const Lista = () => {
     }, []);
 
     return(
-        <section>
+        <section className={styles.secao}>
         {
             loadingLista ? ( 
-                <h1 className="titulo">Carregando sua lista...</h1> 
+                <h1 className={styles.titulo1}>Carregando sua lista...</h1> 
             ) : lista.length ? ( 
                 <>
-                    <h1 className="titulo">Lista de compras:</h1>
+                    <h1 className={styles.titulo1}>Lista de compras:</h1>
                     <ul>
                         {
                             lista.map((item) => (
-                                <li key={item.id}>-{item.nome}<button onClick={() => deletaItem(item.id)}>X</button></li>
+                                <li className={styles.itemlista} key={item.id}>-{item.nome}<button className={styles.lb} onClick={() => deletaItem(item.id)}>X</button></li>
                             ))
                         }
                     </ul>
                 </>
             ) : ( 
-                <h1 className="titulo">Sua lista de compras está vazia</h1> 
+                <h1 className={styles.titulo1}>Sua lista de compras está vazia</h1> 
             )
         }
-        <button className="registrar" onClick={handleAcaoChange}>+</button>
+        <button className={styles.registrar} onClick={handleAcaoChange}>+</button>
         {
             acao &&
-            <div className="novoregistro">
-                <form onSubmit={handleSubmit}>
+            <div className={styles.novoregistro}>
+                <form className={styles.novoregistrof} onSubmit={handleSubmit}>
                     <label htmlFor="item">Item</label>
-                    <input type="text" name="item" id="item" value={item} onChange={handleItemChange} ref={inputItemRef} />
-                    <input type="submit" value="Registrar" className="nrformsub" />
+                    <input className={styles.novoregistrofi} type="text" name="item" id="item" value={item} onChange={handleItemChange} ref={inputItemRef} />
+                    <input type="submit" value="Registrar" className={styles.nrformsub} />
                 </form>
             </div>
         }
