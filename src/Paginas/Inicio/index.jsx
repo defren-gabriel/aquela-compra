@@ -99,7 +99,7 @@ const Inicio = () => {
         }
     }, []);
 
-    //controle de mensagens de erro
+    //controle de exibição dos botoẽs de login e registro
     const [estaLogando, setEstaLogando] = useState(false);
     const handleEstaLogandoChange = (estado) => setEstaLogando(estado);
     const [estaRegistrando, setEstaRegistrando] = useState(false);
@@ -126,7 +126,7 @@ const Inicio = () => {
                                 <input className={styles.caixa} type="password" name="senha" id="senha" value={senha} onChange={handleSenhaChange} />
                             </div>
                             {
-                                estaLogando ?  
+                                estaLogando ? /*oculpa o botão de login/registro para evitar varios cliques do usuario*/
                                 <p className={styles.lfp}>Fazendo o login</p>:
                                 <div className={styles.botoes_login}>
                                     <button className={styles.blb} type="button" onClick={handleAcaoChange}>Registrar</button>
@@ -151,7 +151,7 @@ const Inicio = () => {
                                 <input className={styles.caixa} type="password" name="senha" id="senha" value={senha} onChange={handleSenhaChange} />
                             </div>
                             {
-                                estaRegistrando ?
+                                estaRegistrando ?  /*oculpa o botão de login/registro para evitar varios cliques do usuario*/
                                 <p className={styles.rfp}>Fazendo o registro</p>:
                                 <div className={styles.botoes_registro}>
                                     <button className={styles.brb} type="button" onClick={handleAcaoChange}>Entrar</button>

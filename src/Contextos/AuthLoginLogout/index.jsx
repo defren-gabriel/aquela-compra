@@ -112,14 +112,13 @@ export const AuthProvider = ({ children }) => {
   const deletaItem = async (id) => {
     try {
       await deleteDoc(doc(db, "itens", id));
-      console.log("Item deletado com sucesso!");
     } catch (error) {
       console.error("Erro ao deletar item:", error);
     }
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, register, logout, loading, registraItem, lista, deletaItem, loadingLista }}>
+    <AuthContext.Provider value={{ user, login, register, logout, registraItem, lista, deletaItem, loadingLista }}>
       {!loading && children}
     </AuthContext.Provider>
   );
