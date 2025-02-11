@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../Contextos/AuthLoginLogout";
 
 //Estilo local
-import "./index.css";
+import styles from "./Inicio.module.css";
 
 const Inicio = () => {
     const [email, setEmail] = useState("");
@@ -114,23 +114,23 @@ const Inicio = () => {
         <>
             {
                 acao ? //true = mostra o login e false mostra o registro
-                    <section className="login">
-                        <h1>Faça o Login</h1>
-                        <form onSubmit={handleSubmit}>
-                            <div className="email">
+                    <section className={styles.login}>
+                        <h1 className={styles.ltitulo1}>Faça o Login</h1>
+                        <form className={styles.form1} onSubmit={handleSubmit}>
+                            <div className={styles.email}>
                                 <label htmlFor="email">E-mail</label>
-                                <input type="email" name="email" id="email" value={email} onChange={handleEmailChange} ref={inputEmailRef} />
+                                <input className={styles.caixa} type="email" name="email" id="email" value={email} onChange={handleEmailChange} ref={inputEmailRef} />
                             </div>
-                            <div className="senha">
+                            <div className={styles.senha}>
                                 <label htmlFor="senha">Senha</label>
-                                <input type="password" name="senha" id="senha" value={senha} onChange={handleSenhaChange} />
+                                <input className={styles.caixa} type="password" name="senha" id="senha" value={senha} onChange={handleSenhaChange} />
                             </div>
                             {
                                 estaLogando ?  
-                                <p>Fazendo o login</p>:
-                                <div className="botoes-login">
-                                    <button type="button" onClick={handleAcaoChange}>Registrar</button>
-                                    <input type="submit" value="Entrar" className="active" />
+                                <p className={styles.lfp}>Fazendo o login</p>:
+                                <div className={styles.botoes_login}>
+                                    <button className={styles.blb} type="button" onClick={handleAcaoChange}>Registrar</button>
+                                    <input className={styles.bli} type="submit" value="Entrar" />
                                 </div>
                             }
                         </form>
@@ -139,23 +139,23 @@ const Inicio = () => {
                         }
                     </section> 
                     :
-                    <section className="registro">
-                        <h1>Faça o Registro</h1>
-                        <form onSubmit={handleSubmit}>
-                            <div className="email">
+                    <section className={styles.registro}>
+                        <h1 className={styles.rtitulo1}>Faça o Registro</h1>
+                        <form className={styles.form1} onSubmit={handleSubmit}>
+                            <div className={styles.email}>
                                 <label htmlFor="email">E-mail</label>
-                                <input type="email" name="email" id="email" value={email} onChange={handleEmailChange} ref={inputEmailRef} />
+                                <input className={styles.caixa} type="email" name="email" id="email" value={email} onChange={handleEmailChange} ref={inputEmailRef} />
                             </div>
-                            <div className="senha">
+                            <div className={styles.senha}>
                                 <label htmlFor="senha">Senha</label>
-                                <input type="password" name="senha" id="senha" value={senha} onChange={handleSenhaChange} />
+                                <input className={styles.caixa} type="password" name="senha" id="senha" value={senha} onChange={handleSenhaChange} />
                             </div>
                             {
                                 estaRegistrando ?
-                                <p>Fazendo o registro</p>:
-                                <div className="botoes-registro">
-                                    <button type="button" onClick={handleAcaoChange}>Entrar</button>
-                                    <input type="submit" value="Registrar" className="active" />
+                                <p className={styles.rfp}>Fazendo o registro</p>:
+                                <div className={styles.botoes_registro}>
+                                    <button className={styles.brb} type="button" onClick={handleAcaoChange}>Entrar</button>
+                                    <input className={styles.bri} type="submit" value="Registrar" />
                                 </div>
                             }
                         </form>
