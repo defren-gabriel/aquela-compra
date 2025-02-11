@@ -6,6 +6,11 @@
 .titulo1 {
     color: #212A31;
     font-size: 2em;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .itemlista {
@@ -20,6 +25,11 @@
     border-radius: 10px;
     color: #212A31;
     font-size: 1.2em;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .lb {
@@ -28,6 +38,11 @@
     color: #124E66;
     border: 2px solid #124E66;
     border-radius: 5px;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .lb:hover {
@@ -44,6 +59,11 @@
     border-radius: 5px;
     font-size: 3em;
     margin-left: 50px;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .novoregistro {
@@ -61,6 +81,13 @@
 
 .novoregistrofi {
     flex-grow: 1;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+    color: #124E66;
 }
 
 .nrformsub {
@@ -72,6 +99,20 @@
     border: 2px solid #124E66;
     border-radius: 5px;
     text-align: center;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.label {
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+    color: #124E66;
 }
 
 /*configuração para dispositivos moveis*/

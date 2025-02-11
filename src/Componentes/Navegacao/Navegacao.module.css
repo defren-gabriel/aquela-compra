@@ -1,5 +1,8 @@
 .header {
     margin: 25px 0 25px 0;
+
+    max-width: 750px;
+    margin: auto;
 }
 
 .dev {
@@ -18,6 +21,11 @@
     border-radius: 5px;
     color: black;
     padding: 3px 5px;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .nav {
@@ -40,6 +48,11 @@
 .container1s {
     font-size: 42px;
     color: #212A31;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .container1a {
@@ -51,6 +64,11 @@
 
     background-color: #124E66;
     color: #ffffff !important;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .navb {
@@ -59,6 +77,11 @@
     padding: 8px 15px;
     border-radius: 5px;
     border: 2px solid #ED333B;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .navb:hover {
@@ -66,17 +89,13 @@
     color: #ffffff;
 }
 
-/*classe do navlink ativa*/
-.active {
-    
-}
-
 /*configuração para celulares*/
 @media screen and (max-width: 750px){
     .container1 {
         gap: 5px;
     }
-    .container1 span {
+    
+    .container1s {
         font-size: 28px;
     }   
 }

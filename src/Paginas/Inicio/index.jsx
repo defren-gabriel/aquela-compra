@@ -118,11 +118,11 @@ const Inicio = () => {
                         <h1 className={styles.ltitulo1}>Faça o Login</h1>
                         <form className={styles.form1} onSubmit={handleSubmit}>
                             <div className={styles.email}>
-                                <label htmlFor="email">E-mail</label>
+                                <label className={styles.label} htmlFor="email">E-mail</label>
                                 <input className={styles.caixa} type="email" name="email" id="email" value={email} onChange={handleEmailChange} ref={inputEmailRef} />
                             </div>
                             <div className={styles.senha}>
-                                <label htmlFor="senha">Senha</label>
+                                <label className={styles.label} htmlFor="senha">Senha</label>
                                 <input className={styles.caixa} type="password" name="senha" id="senha" value={senha} onChange={handleSenhaChange} />
                             </div>
                             {
@@ -135,7 +135,7 @@ const Inicio = () => {
                             }
                         </form>
                         {
-                            error && <p className="erro">{error}</p>
+                            error && <p className={styles.error}>{error}</p>
                         }
                     </section> 
                     :
@@ -143,11 +143,11 @@ const Inicio = () => {
                         <h1 className={styles.rtitulo1}>Faça o Registro</h1>
                         <form className={styles.form1} onSubmit={handleSubmit}>
                             <div className={styles.email}>
-                                <label htmlFor="email">E-mail</label>
+                                <label className={styles.label} htmlFor="email">E-mail</label>
                                 <input className={styles.caixa} type="email" name="email" id="email" value={email} onChange={handleEmailChange} ref={inputEmailRef} />
                             </div>
                             <div className={styles.senha}>
-                                <label htmlFor="senha">Senha</label>
+                                <label className={styles.label} htmlFor="senha">Senha</label>
                                 <input className={styles.caixa} type="password" name="senha" id="senha" value={senha} onChange={handleSenhaChange} />
                             </div>
                             {
@@ -160,7 +160,7 @@ const Inicio = () => {
                             }
                         </form>
                         {
-                            error && <p className="erro">{error}</p>
+                            error && <p className={styles.error}>{error}</p>
                         }
                     </section>
             }

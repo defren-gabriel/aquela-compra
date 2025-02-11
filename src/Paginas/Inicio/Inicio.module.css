@@ -5,6 +5,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    max-width: 500px;
+    margin: auto;
 }
 
 .form1 {
@@ -16,11 +19,23 @@
 .lfp {
     text-align: center;
     font-size: 1.5em;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .ltitulo1 {
     margin-bottom: 25px;
     font-size: 2em;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+    color: #212A31;
 }
 
 .email {
@@ -59,6 +74,11 @@
     border: 2px solid #124E66;
     border-radius: 5px;
     color: #212A31;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .bli {
@@ -76,6 +96,11 @@
     border: 2px solid #124E66;
     padding: 4px 6px;
     border-radius: 5px;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 /*area do registro*/
@@ -85,6 +110,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    max-width: 500px;
+    margin: auto;
 }
 
 .form1 {
@@ -96,11 +124,23 @@
 .rfp {
     text-align: center;
     font-size: 1.5em;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .rtitulo1 {
     margin-bottom: 25px;
     font-size: 2em;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+    color: #212A31;
 }
 
 .botoes_registro {
@@ -117,6 +157,11 @@
     border: 2px solid #124E66;
     border-radius: 5px;
     color: #212A31;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .bri {
@@ -126,6 +171,7 @@
     border: 2px solid #124E66;
     border-radius: 5px;
     color: #212A31;
+    
 
     /*ativo*/
     background-color: #124E66;
@@ -134,9 +180,35 @@
     border: 2px solid #124E66;
     padding: 4px 6px;
     border-radius: 5px;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .caixa {
     width: 220px;
     color: #212A31;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.label {
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+    color: #212A31;
+}
+
+.error {
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }

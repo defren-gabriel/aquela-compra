@@ -1,3 +1,8 @@
 .titulo1 {
     color: #212A31;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }

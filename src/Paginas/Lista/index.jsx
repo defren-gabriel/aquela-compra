@@ -69,7 +69,7 @@ const Lista = () => {
             acao &&
             <div className={styles.novoregistro}>
                 <form className={styles.novoregistrof} onSubmit={handleSubmit}>
-                    <label htmlFor="item">Item</label>
+                    <label className={styles.label} htmlFor="item">Item</label>
                     <input className={styles.novoregistrofi} type="text" name="item" id="item" value={item} onChange={handleItemChange} ref={inputItemRef} />
                     <input type="submit" value="Registrar" className={styles.nrformsub} />
                 </form>
