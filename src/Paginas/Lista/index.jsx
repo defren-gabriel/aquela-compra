@@ -44,6 +44,14 @@ const Lista = () => {
         }
     }, []);
 
+    //manipula a exclusão de um item
+    const handleDeleteItem = (id) => {
+        const confirma = window.confirm("Deseja realmente deletar este item?");
+        if(confirma){
+            deletaItem(id);
+        }
+    }
+
     return(
         <section className={styles.secao}>
         {
@@ -55,7 +63,7 @@ const Lista = () => {
                     <ul>
                         {
                             lista.map((item) => (
-                                <li className={styles.itemlista} key={item.id}>-{item.nome}<button className={styles.lb} onClick={() => deletaItem(item.id)}>X</button></li>
+                                <li className={styles.itemlista} key={item.id}>-{item.nome}<button className={styles.lb} onClick={() => handleDeleteItem(item.id)}>X</button></li>
                             ))
                         }
                     </ul>
