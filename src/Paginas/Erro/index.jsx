@@ -6,12 +6,8 @@ import styles from "./Erro.module.css";
 const Erro = () => {
     const navigate = useNavigate();
     useEffect(() => {
-        const timer = setTimeout(() => {
-          navigate("/");
-        }, 4000); // Espera 2 segundos antes de redirecionar
-    
-        return () => clearTimeout(timer); // Limpa o timer ao desmontar o componente
-      }, [navigate]);
+        navigate("/");
+      }, []);
 
     return(
         <section className={styles.container}>
