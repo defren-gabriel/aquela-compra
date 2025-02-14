@@ -3,16 +3,16 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
+  apiKey: "AIzaSyDn-j_vnVpbKX1ST_z8KJthrn19UXXxPls",
+  authDomain: "aquela-compra.firebaseapp.com",
+  projectId: "aquela-compra",
+  storageBucket: "aquela-compra.firebasestorage.app",
+  messagingSenderId: "837975569108",
+  appId: "1:837975569108:web:ece04de4b5dfe2fa1bc141",
+  measurementId: "G-RN3PKHC4XN"
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
