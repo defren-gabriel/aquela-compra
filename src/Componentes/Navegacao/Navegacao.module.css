@@ -36,34 +36,9 @@
     align-items: flex-end;
 }
 
-.container1 {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-end;
-    gap: 25px;
-}
-
 .container1s {
     font-size: 42px;
     color: #212A31;
-
-    font-family: "Quicksand", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-}
-
-.container1a {
-    text-decoration: none;
-    color: #212A31;
-    padding: 5px 15px;
-    border-radius: 5px;
-    border: 2px solid #124E66;
-
-    background-color: #124E66;
-    color: #ffffff !important;
 
     font-family: "Quicksand", serif;
     font-optical-sizing: auto;
@@ -90,11 +65,7 @@
 }
 
 /*configuração para celulares*/
-@media screen and (max-width: 750px){
-    .container1 {
-        gap: 5px;
-    }
-    
+@media screen and (max-width: 750px){    
     .container1s {
         font-size: 28px;
     }   
